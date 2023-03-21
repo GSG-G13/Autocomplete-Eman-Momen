@@ -1,0 +1,22 @@
+{
+  "name": "autocomplete-eman-momen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GSG-G13/Autocomplete-Eman-Momen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GSG-G13/Autocomplete-Eman-Momen/issues"
+  },
+  "homepage": "https://github.com/GSG-G13/Autocomplete-Eman-Momen#readme",
+  "dependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
