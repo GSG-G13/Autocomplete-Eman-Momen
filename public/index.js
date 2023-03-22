@@ -1,4 +1,4 @@
-// let data = require("../data/food.json");
+let myInput = document.querySelector(".myInput");
 
 const myFetch = (cb) => {
   document.onreadystatechange = () => {
@@ -22,5 +22,8 @@ const myFetch = (cb) => {
 };
 
 myFetch((data) => {
-  console.log(data);
+  // console.log(data);
+  myInput.addEventListener("input", (e) => {
+    data.ingredients.filter();
+  });
 });
