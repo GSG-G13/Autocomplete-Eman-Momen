@@ -1,8 +1,6 @@
 const fs = require("fs");
-
 const myHandler = (path, contentType, res) => {
   fs.readFile(path, "utf8", (err, file) => {
-    /* istanbul ignore if */
     if (err) {
       res.writeHead(500, { "content-type": "text/plain" });
       res.end("server error");

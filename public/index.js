@@ -1,37 +1,32 @@
+// const myFetch = require("./fetch");
 let myInput = document.querySelector(".myInput");
 let options = document.querySelector(".options");
 
-const myFetch = (cb) => {
-  document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4) {
-          if (xhr.status === 200) {
-            const data = JSON.parse(xhr.responseText);
-            cb(data);
-            // console.log(data);
-          } else {
-            console.error(xhr.responseText);
-          }
-        }
-      };
-      xhr.open("GET", "/data/food.json", true);
-      xhr.send();
-    }
-  };
-};
+const renderAutoSuggest = (data) => {
+  console.log(data);
+  options.textContent = "";
+  console.log(data);
+  data.forEach((word) => {
+    // options.innerHTML += `<span class="option">${word}</span>`;
+    const option = document.createElement("span");
+    option.classList.add("option");
+    option.textContent = word;
 
-myFetch((data) => {
-  // console.log(data);
-  myInput.addEventListener("input", (e) => {
-    options.textContent = "";
-    if (e.target.value !== "") {
-      data.ingredients.forEach((ward) => {
-        if (ward.startsWith(e.target.value)) {
-          options.innerHTML += `<span class="option">${ward}</span>`;
-        }
-      });
-    }
+    options.append(option);
   });
+};
+const renderFood = () => {};
+const getDataFromApi = () => {};
+myInput.addEventListener("keyup", (e) => {
+  if (myInput.value) {
+    fetchData(`/search?q=${e.target.value}`, renderAutoSuggest);
+  } else {
+    options.textContent = "";
+  }
 });
+
+// user search on specific term // pizz
+// value pizz send to server on our route (search endpoint)
+// handle my endpoint get search term
+// filter data based on search term
+// send response
