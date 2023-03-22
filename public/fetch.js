@@ -4,7 +4,6 @@ const fetchData = (url, cb) => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
         const data = JSON.parse(xhr.responseText);
-        // console.log(data);
         cb(data);
       } else {
         console.error(xhr.responseText);
@@ -14,5 +13,3 @@ const fetchData = (url, cb) => {
   xhr.open("GET", url, true);
   xhr.send();
 };
-
-// module.exports = fetchData;
