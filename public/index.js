@@ -1,4 +1,5 @@
 let myInput = document.querySelector(".myInput");
+let options = document.querySelector(".options");
 
 const myFetch = (cb) => {
   document.onreadystatechange = () => {
@@ -24,6 +25,13 @@ const myFetch = (cb) => {
 myFetch((data) => {
   // console.log(data);
   myInput.addEventListener("input", (e) => {
-    data.ingredients.filter();
+    options.textContent = "";
+    if (e.target.value !== "") {
+      data.ingredients.forEach((ward) => {
+        if (ward.startsWith(e.target.value)) {
+          options.innerHTML += `<span class="option">${ward}</span>`;
+        }
+      });
+    }
   });
 });
