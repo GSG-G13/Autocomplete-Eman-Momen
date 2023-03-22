@@ -281,13 +281,15 @@ section {
   display: block;
   padding: 1rem 2rem;
   font-size: 16px;
+  cursor: pointer;
 }
 .options .option:hover {
   background-color: #eee;
 }
 
 .form-container form .btn {
-  flex: 1;
+  /* flex: 1; */
+  display: none;
 }
 
 .form-container form .myingredients {
