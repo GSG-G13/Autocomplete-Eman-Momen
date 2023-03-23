@@ -68,6 +68,7 @@ const renderFood = (data) => {
 
 myInput.addEventListener("keyup", (e) => {
   if (myInput.value) {
+    options.style.display = "block";
     fetchData(`/search?q=${e.target.value}`, renderAutoSuggest);
   } else {
     options.textContent = "";
