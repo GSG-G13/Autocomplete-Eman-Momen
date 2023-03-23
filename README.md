@@ -1,1 +1,35 @@
-# Autocomplete-Eman-Momen
+# Recipes search ✨
+
+## Description
+
+#### Our App provides a list of recipes' suggestions for the user as he types. The suggestions are based on the user's input.
+
+## User Stories
+
+- As a user, I want to see a list of suggestions as I type.
+- As a user, I want to be able to select a suggestion from the listز
+
+## How to install?
+
+- Clone the repo.
+- npm install.
+- npm start.
+- Open http://localhost:4000/ in your browser.
+- You can use the live demo of the project here.[Live Demo](https://autocomplete-eman-momen.onrender.com/)
+
+## Team
+
+- Eman
+- Momen
+
+## Technologies Used
+
+<p align="center">
+  <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" width="50" height="50"/>
+  <img src="https://img.icons8.com/color/48/000000/css3.png" width="50" height="50"/>
+    <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" width="50" height="50"/>
+    <!-- Nodejs -->
+    <img src="https://img.icons8.com/color/48/000000/nodejs.png" width="50" height="50"/>
+    <!-- npm -->
+    <img src="https://img.icons8.com/color/48/000000/npm.png" width="50" height="50"/>
+</p>
